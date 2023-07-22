@@ -20,10 +20,11 @@ def solution(cap, n, deliveries, pickups):
             for k in range(n):
                 if maxnum == 0:
                     break
-                if pickups[j] <= maxnum:
-                    maxnum -= pickups[j]
-                    pickups[j] = 0
+                if pickups[k] <= maxnum:
+                    maxnum -= pickups[k]
+                    pickups[k] = 0
                 else:
-                    pickups[j] = pickups[j] - maxnum
+                    pickups[k] = pickups[k] - maxnum
                     maxnum = 0
+
     return (answer)
