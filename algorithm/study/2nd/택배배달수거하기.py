@@ -5,26 +5,24 @@ def solution(cap, n, deliveries, pickups):
     
     for i in range(n):
         if (deliveries[i] != 0) or (pickups[i] != 0):
-            maxnum = cap
+            maxnum1 = cap
+            maxnum2 = cap
             answer += 2 * (n - i)
             for j in range(n):
-                if maxnum == 0:
-                    break
-                if deliveries[j] <= maxnum:
-                    maxnum -= deliveries[j]
-                    deliveries[j] = 0
-                else:
-                    deliveries[j] = deliveries[j] - maxnum
-                    maxnum = 0
-            maxnum = cap
-            for k in range(n):
-                if maxnum == 0:
-                    break
-                if pickups[k] <= maxnum:
-                    maxnum -= pickups[k]
-                    pickups[k] = 0
-                else:
-                    pickups[k] = pickups[k] - maxnum
-                    maxnum = 0
+                if maxnum1 != 0:
+                    if deliveries[j] <= maxnum1:
+                        maxnum1 -= deliveries[j]
+                        deliveries[j] = 0
+                    else:
+                        deliveries[j] = deliveries[j] - maxnum1
+                        maxnum1 = 0
+                
+                if maxnum2 != 0:
+                    if pickups[j] <= maxnum2:
+                        maxnum2 -= pickups[j]
+                        pickups[j] = 0
+                    else:
+                        pickups[j] = pickups[j] - maxnum2
+                        maxnum2 = 0
 
-    return (answer)
+    return answer
