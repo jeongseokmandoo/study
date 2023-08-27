@@ -1,12 +1,9 @@
-.ReviewListItem {
+.ReviewForm {
   display: flex;
-  padding: 10px;
-  align-items: center;
+  flex-direction: column;
+  padding: 10px 0;
 }
 
-.ReviewListItem-img {
-  width: 200px;
-  height: 300px;
-  object-fit: cover;
-  margin-right: 20px;
+.ReviewForm > :not(:last-child) {
+  margin-bottom: 20px;
 }
