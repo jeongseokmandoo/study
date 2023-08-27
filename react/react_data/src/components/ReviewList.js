@@ -55,7 +55,7 @@ function ReviewList({ items, onDelete, onUpdate, onUpdateSuccess }) {
             <li key={item.id}>
               <ReviewForm
                 initialValues={initialValues}
-                imnitialPreview={imgUrl}
+                initialPreview={imgUrl}
                 onCancel={handleCancel}
                 onSubmit={handleSubmit}
                 onSubmitSuccess={handleSubmitSuccess}
