@@ -20,6 +20,5 @@ n_list = [int(input()) for _ in range(n)]
 
 
 # 파이썬 정렬 라이브러리 사용
-
 for i in sorted(n_list):
     print(i)
